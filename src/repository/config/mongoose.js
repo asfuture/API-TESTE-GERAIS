@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const password = encodeURIComponent('Aiesec2014');
+const password = encodeURIComponent('senha');
 const uri = `mongodb+srv://asfuture:${password}@genidoces.mqztirw.mongodb.net/genidoces?retryWrites=true&w=majority&appName=genidoces`;
 
 async function connectToDatabase() {
