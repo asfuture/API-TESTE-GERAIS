@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-const password = encodeURIComponent('123456clark');
-const uri = `mongodb+srv://admin:${password}@genidoces.mqztirw.mongodb.net/genidoces?retryWrites=true&w=majority&appName=genidoces`;
+const password = encodeURIComponent(process.env.KEY_SECRET);
+const uri = `mongodb+srv://admin:${password}@${process.env.USUARIO_MONGODB}.mqztirw.mongodb.net/${process.env.USUARIO_MONGODB}?retryWrites=true&w=majority&appName=${process.env.USUARIO_MONGODB}`;
 
 async function connectToDatabase() {
     try {
